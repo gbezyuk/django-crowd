@@ -8,11 +8,11 @@ Installation
 
 Try this:
 
-    pip git+git@github.com:gbezyuk/melamed.git
+    pip install git+git://github.com/gbezyuk/django-crowd.git
 
 Or this:
 
-    pip -e get+git@github.com:gbezyuk/melamed.git#egg=Django-Crowd
+    pip install -e git+git://github.com/gbezyuk/django-crowd.git#egg=Django-Crowd
 
 You could also simply copy this repository crowd folder to your project.
 
