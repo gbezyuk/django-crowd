@@ -29,7 +29,7 @@ AUTHENTICATION_BACKENDS = (
 
     'django.contrib.auth.backends.ModelBackend',
 
-    'django_crowd.CrowdBackend'
+    'crowd.backends.CrowdBackend'
 )
 
 Credits:

@@ -1,0 +1,10 @@
+/*
+ * ----------------------------------------------------------------------------
+ * "THE VEGETARIAN-FOOD-WARE LICENSE" (Revision 1):
+ * Konstantin J. Volkov <konstantin-j-volkov@yandex.ru>
+ * and Grigoriy Beziuk <gbezyuk@gmail.com> wrote this software.
+ * As long as you retain this notice you can do whatever you want with
+ * this stuff. If we meet some day, and you think this stuff is worth it, you
+ * can feed me (or us) with some tasty (and maybe vegetarian) food (or drink).
+ * ----------------------------------------------------------------------------
+ */
