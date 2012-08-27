@@ -1,6 +1,6 @@
 /*
  * ----------------------------------------------------------------------------
- * "THE VEGETARIAN-FOOD-WARE LICENSE" (Revision 1):
+ * "THE VEGETARIAN-FOOD-WARE LICENSE" (Revision 2):
  * Konstantin J. Volkov <konstantin-j-volkov@yandex.ru>
  * and Grigoriy Beziuk <gbezyuk@gmail.com> wrote this software.
  * As long as you retain this notice you can do whatever you want with
