@@ -108,6 +108,9 @@ class CrowdBackend(ModelBackend):
         return user
 
     def _parse_crowd_response(self, content):
+        """
+        Returns e-mail, first and last names of user from provided CROWD response. Private service method.
+        """
         dom = parseString(content)
         return {
             'email': self._get_user_parameter_from_dom_tree(dom, 'email'),
