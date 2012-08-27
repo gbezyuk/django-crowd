@@ -3,6 +3,21 @@ django-crowd
 
 Simple Attlasian CROWD authentication backend for Django
 
+Installation
+============
+
+Try this:
+
+    pip git+git@github.com:gbezyuk/melamed.git
+
+Or this:
+
+    pip -e get+git@github.com:gbezyuk/melamed.git#egg=Django-Crowd
+
+You could also simply copy this repository crowd folder to your project.
+
+Pip egg is coming hopefully soon.
+
 Configuration:
 ==============
 
