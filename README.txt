@@ -6,7 +6,9 @@ Simple Attlasian CROWD authentication backend for Django
 Installation
 ============
 
-Try this:
+    pip install django-crowd
+
+Also, to install development version you can try this:
 
     pip install git+git://github.com/gbezyuk/django-crowd.git
 
@@ -15,8 +17,6 @@ Or this:
     pip install -e git+git://github.com/gbezyuk/django-crowd.git#egg=Django-Crowd
 
 You could also simply copy this repository crowd folder to your project.
-
-Pip egg is coming hopefully soon.
 
 Configuration:
 ==============
