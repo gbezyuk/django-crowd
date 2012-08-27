@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.test.utils import override_settings
-from . import CrowdBackend
+from .backends import CrowdBackend
 from django.contrib.auth.models import User
 
 class CrowdBackendAuthTest(TestCase):
