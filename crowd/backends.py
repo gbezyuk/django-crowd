@@ -22,7 +22,7 @@ class CrowdBackend(ModelBackend):
             if user:
                 user.set_password(password)
             else:
-                self._create_new_user_from_crowd_response(username, password, content, crowd_config)
+                user = self._create_new_user_from_crowd_response(username, password, content, crowd_config)
             return user
         else:
             return None
