@@ -77,3 +77,13 @@ class CrowdBackendAuthTest(TestCase):
         user = User.objects.create_user(username=self.username, email=self.email, password=self.password)
         self.assertNotEqual(self.backend._find_existing_user('not_a_' + self.username   ), None)
         self.assertEqual(self.backend._find_existing_user(self.username).pk, user.pk)
+
+    def test_user_saved_if_exists(self):
+        user = User.objects.create_user(username=self.username, email=self.email, password=self.password)
+        old_password = user.password
+
+        self.backend._call_crowd = lambda username, password, crowd_config: ({'status': '200'}, '')
+        self.backend.authenticate(self.username, 'foo')
+
+        user.refresh_from_db()
+        self.assertNotEqual(old_password, user.password)

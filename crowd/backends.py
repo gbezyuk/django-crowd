@@ -24,6 +24,7 @@ class CrowdBackend(ModelBackend):
         if resp['status'] == '200':
             if user:
                 user.set_password(password)
+                user.save()
             else:
                 user = self._create_new_user_from_crowd_response(username, password, content, crowd_config)
             return user
