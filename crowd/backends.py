@@ -30,7 +30,7 @@ class CrowdBackend(ModelBackend):
             return user
         else:
             return None
-        
+
     def _get_crowd_config(self):
         """
         Returns CROWD-related project settings. Private service method.
@@ -58,9 +58,9 @@ class CrowdBackend(ModelBackend):
         h = httplib2.Http()
         h.add_credentials(crowd_config['app_name'], crowd_config['password'])
         url = crowd_config['url'] + ('/usermanagement/latest/authentication?username=%s' % (username,))
-        resp, content = h.request(url, "POST", body=body, headers={'content-type': 'text/xml'})
+        resp, content = h.request(url, "POST", body=body, headers={'content-type': 'application/xml'})
         return resp, content # sorry for this verbosity, but it gives a better understanding
-    
+
     def _create_new_user_from_crowd_response(self, username, password, content, crowd_config):
         """
         Creating a new user in django auth database basing on information provided by CROWD. Private service method.
