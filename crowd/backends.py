@@ -1,3 +1,4 @@
+from django.core.exceptions import FieldError
 from django.contrib.auth import get_user_model
 from django.conf import settings
 from xml.dom.minidom import parseString
@@ -43,7 +44,13 @@ class CrowdBackend(ModelBackend):
         """
         Finds an existing user with provided username if one exists. Private service method.
         """
-        users = User.objects.filter(username=username)
+        try:
+            # username
+            users = User.objects.filter(username=username)
+        except FieldError as e:
+            # no field named username try email
+            users = User.objects.filter(email=username)
+
         if users.count() <= 0:
             return None
         else:
